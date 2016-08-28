@@ -7,4 +7,9 @@ describe('removeAllVowels Filter', function () {
 		$filter = $injector.get('$filter');
 	}));
 
+	it('should remove all vowels in a word', function () {
+		var word = "quick";
+		var result = $filter('removeAllVowels')(word);
+		expect(result).toEqual("qck");
+	});
 });
